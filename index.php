@@ -11,18 +11,25 @@ $Channelsecret = "e4b5bc21c657512e24e9f41ea5bbdf31";
 
 $access_token = '5h0birezKJIJhzFsE7jCfsmr7vXZpVRVMPV+opEMo/3IPcjfmNUjQXgSxS7sNOBcIR88rwIJhSma1qkTyKY34st//BI5yDUhqaEY0XbANLIm/4gX/iIQnFD7SN/QF061yMqL0NQ9DD5Goy6GaxRVBAdB04t89/1O/w1cDnyilFU='; 
 
+$str = "Hello Man"; 
+//$replyToken = "Good Job " ;
+
+
 
 $sValue= getInputMessage() ; 
 
 $MessageInput = $sValue[0];  
 $replyToken =  $sValue[1];  
 
+pushMessage($str,$access_token,$replyToken) ;  
+return;
+
 
 $ActionType= substr($MessageInput,0,1) ; 
 $resp = "Bot Set From GIT -----Ok---Action Type-->" .$ActionType ;
 //echo $resp;
 $contact9 = $sValue[0] ;
-
+$str = "aaaa";
 pushMessage($str,$access_token,$replyToken) ; 
 
 
