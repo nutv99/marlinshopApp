@@ -11,7 +11,7 @@ $Channelsecret = "e4b5bc21c657512e24e9f41ea5bbdf31";
 
 $access_token = '5h0birezKJIJhzFsE7jCfsmr7vXZpVRVMPV+opEMo/3IPcjfmNUjQXgSxS7sNOBcIR88rwIJhSma1qkTyKY34st//BI5yDUhqaEY0XbANLIm/4gX/iIQnFD7SN/QF061yMqL0NQ9DD5Goy6GaxRVBAdB04t89/1O/w1cDnyilFU='; 
 
-$str = "Hello Man"; 
+
 //$replyToken = "Good Job " ;
 
 
@@ -19,6 +19,7 @@ $str = "Hello Man";
 $sValue= getInputMessage() ; 
 
 $MessageInput = $sValue[0];  
+$str = "Hello Man ".$MessageInput  ; 
 $replyToken =  $sValue[1];  
 
 pushMessage($str,$access_token,$replyToken) ;  
