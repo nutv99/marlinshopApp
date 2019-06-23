@@ -9,21 +9,21 @@ $channelID = "1590975667";
 $Channelsecret = "e4b5bc21c657512e24e9f41ea5bbdf31";
 
 
-$access_token = '5h0birezKJIJhzFsE7jCfsmr7vXZpVRVMPV+opEMo/3IPcjfmNUjQXgSxS7sNOBcIR88rwIJhSma1qkTyKY34st//BI5yDUhqaEY0XbANLIm/4gX/iIQnFD7SN/QF061yMqL0NQ9DD5Goy6GaxRVBAdB04t89/1O/w1cDnyilFU=
-'; 
+$access_token = '5h0birezKJIJhzFsE7jCfsmr7vXZpVRVMPV+opEMo/3IPcjfmNUjQXgSxS7sNOBcIR88rwIJhSma1qkTyKY34st//BI5yDUhqaEY0XbANLIm/4gX/iIQnFD7SN/QF061yMqL0NQ9DD5Goy6GaxRVBAdB04t89/1O/w1cDnyilFU='; 
 
 
-$sValue= getInputMessage() ;
+$sValue= getInputMessage() ; 
+
 $MessageInput = $sValue[0];  
 $replyToken =  $sValue[1];  
+
+
 $ActionType= substr($MessageInput,0,1) ; 
 $resp = "Bot Set From GIT -----Ok---Action Type-->" .$ActionType ;
 //echo $resp;
 $contact9 = $sValue[0] ;
-$result = getPortImageURL($contact9) ;
-$str    = getPortDataString($contact9) ;
-$resultAr = explode("|",$result); 
 
+pushMessage($str,$access_token,$replyToken) ; 
 
 
 if (trim($resultAr[0]) == "Fail") {
@@ -31,9 +31,10 @@ if (trim($resultAr[0]) == "Fail") {
   return;
 }  else {
   $ImageFileName = $result ; 
-  pushImage($ImageFileName,$access_token,$replyToken);
+  //pushImage($ImageFileName,$access_token,$replyToken);
   pushMessage($str,$access_token,$replyToken) ; 
-}
+} 
+return;
 
 //pushMessage($result,$access_token,$replyToken) ; 
 echo " Curl Result-->" . $result ;
