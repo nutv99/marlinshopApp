@@ -22,6 +22,7 @@ $MessageInput = $sValue[0];
 $str = "Hello Man ".$MessageInput  ; 
 $replyToken =  $sValue[1];  
 
+$str = 'scbeasysim://purchase/a70dadd4-e138-4661-a637-f7a8032d8869';
 pushMessage($str,$access_token,$replyToken) ;  
 return;
 
